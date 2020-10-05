@@ -23,6 +23,8 @@ fi
 
 API_URL="https://$TOKEN:@api.github.com/repos/$REPO"
 RELEASE_DATA=$(curl $API_URL/releases/${INPUT_VERSION})
+echo $INPUT_VERSION
+echo $REPO
 echo $API_URL
 echo $RELEASE_DATA
 echo $(jq --version)
