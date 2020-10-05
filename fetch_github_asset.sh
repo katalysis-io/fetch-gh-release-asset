@@ -22,7 +22,7 @@ if ! [[ -z ${INPUT_TOKEN} ]]; then
 fi
 
 API_URL="https://api.github.com/repos/$REPO"
-RELEASE_DATA=$(curl -H "Authorization: token $TOKEN" -H "Accept: application/octet-stream" $API_URL/releases/${INPUT_VERSION})
+RELEASE_DATA=$(curl -H "Authorization: token $TOKEN" $API_URL/releases/${INPUT_VERSION})
 echo $INPUT_VERSION
 echo $REPO
 echo $API_URL
